@@ -1,7 +1,6 @@
 <?php
 
 $lines = file('input.txt');
-$data = array();
 $target = array(
     'children' => 3,
     'cats' => 7,
