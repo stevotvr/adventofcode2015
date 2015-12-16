@@ -1,16 +1,6 @@
 <?php
 
 $lines = file('input.txt');
-$data = array();
-
-foreach($lines as $line) {
-    list($name, $props) = explode(': ', $line, 2);
-    foreach(explode(', ', $props) as $prop) {
-        list($k, $v) = explode(': ', $prop);
-        $data[$name][$k] = (int)$v;
-    }
-}
-
 $target = array(
     'children' => 3,
     'cats' => 7,
@@ -24,8 +14,10 @@ $target = array(
     'perfumes' => 1
 );
 
-foreach($data as $aunt => $props) {
-    foreach($props as $k => $v) {
+foreach($lines as $line) {
+    list($name, $props) = explode(': ', $line, 2);
+    foreach(explode(', ', $props) as $prop) {
+        list($k, $v) = explode(': ', $prop);
         switch($k) {
             case 'cats':
             case 'trees':
@@ -40,11 +32,11 @@ foreach($data as $aunt => $props) {
                 }
                 break;
             default:
-                if($target[$k] !== $v) {
+                if($target[$k] != $v) {
                     continue 3;
                 }
         }
     }
-    echo 'Answer: ' . $aunt;
+    echo 'Answer: ' . $name;
     break;
 }
