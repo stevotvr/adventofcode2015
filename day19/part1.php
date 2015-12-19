@@ -18,7 +18,7 @@ foreach($map as $el => $reps) {
    foreach($reps as $rep) {
         $offset = 0;
         while(($offset = strpos($input, $el, $offset)) !== false) {
-            $new = substr($input, 0, $offset) . $rep . substr($input, $offset + $len);
+            $new = substr_replace($input, $rep, $offset, $len);
             $output[$new] = true;
             $offset += $len;
         }
