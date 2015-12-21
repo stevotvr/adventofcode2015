@@ -2,29 +2,29 @@
 
 $items = array(
     'w' => array(
-        new Item('Dagger', 8, 4, 0),
-        new Item('Shortsword', 10, 5, 0),
-        new Item('Warhammer', 25, 6, 0),
-        new Item('Longsword', 40, 7, 0),
-        new Item('Greataxe', 74, 8, 0)
+        new Item(8, 4, 0),
+        new Item(10, 5, 0),
+        new Item(25, 6, 0),
+        new Item(40, 7, 0),
+        new Item(74, 8, 0)
     ),
     'a' => array(
-        new Item('Leather', 13, 0, 1),
-        new Item('Chainmail', 31, 0, 2),
-        new Item('Splintmail', 53, 0, 3),
-        new Item('Bandedmail', 75, 0, 4),
-        new Item('Platemail', 102, 0, 5),
-        new Item('Empty', 0, 0, 0)
+        new Item(13, 0, 1),
+        new Item(31, 0, 2),
+        new Item(53, 0, 3),
+        new Item(75, 0, 4),
+        new Item(102, 0, 5),
+        new Item(0, 0, 0)
     ),
     'r' => array(
-        new Item('Damage +1', 25, 1, 0),
-        new Item('Damage +2', 50, 2, 0),
-        new Item('Damage +3', 100, 3, 0),
-        new Item('Defense +1', 20, 0, 1),
-        new Item('Defense +2', 40, 0, 2),
-        new Item('Defense +3', 80, 0, 3),
-        new Item('Empty', 0, 0, 0),
-        new Item('Empty', 0, 0, 0)
+        new Item(25, 1, 0),
+        new Item(50, 2, 0),
+        new Item(100, 3, 0),
+        new Item(20, 0, 1),
+        new Item(40, 0, 2),
+        new Item(80, 0, 3),
+        new Item(0, 0, 0),
+        new Item(0, 0, 0)
     )
 );
 
@@ -36,13 +36,11 @@ $bossStats = array(
 
 class Item {
 
-    private $name;
     private $cost;
     private $damage;
     private $armor;
 
-    public function __construct($name, $cost, $damage, $armor) {
-        $this->name = $name;
+    public function __construct($cost, $damage, $armor) {
         $this->cost = $cost;
         $this->damage = $damage;
         $this->armor = $armor;
@@ -90,14 +88,7 @@ function getCombinations(array $items, $count, array &$combos, array $combo = ar
 function isWinner(array $player, array $boss) {
     $playerDamage = max(array(1, $player['d'] - $boss['a']));
     $bossDamage = max(array(1, $boss['d'] - $player['a']));
-    while(true) {
-        if(($boss['h'] -= $playerDamage) <= 0) {
-            return true;
-        }
-        if(($player['h'] -= $bossDamage) <= 0) {
-            return false;
-        }
-    }
+    return $player['h'] / $bossDamage > $boss['h'] / $playerDamage;
 }
 
 $ringCombos = array();
