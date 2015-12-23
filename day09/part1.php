@@ -29,13 +29,13 @@ function getPermutations(array $items, &$result, array $perms = array()) {
 }
 
 getPermutations(array_keys($map), $permutations);
-$longest = PHP_INT_MAX;
+$shortest = PHP_INT_MAX;
 foreach($permutations as $route) {
     $distance = 0;
     for($i = 0; $i < count($route) - 1; $i++) {
         $distance += $map[$route[$i]][$route[$i + 1]];
     }
-    $longest = min(array($longest, $distance));
+    $shortest = min(array($shortest, $distance));
 }
 
-echo 'Answer: ' . $longest;
+echo 'Answer: ' . $shortest;
