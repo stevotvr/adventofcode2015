@@ -1,6 +1,6 @@
 <?php
 
-$lines = file('input.txt');
+$lines = file('input.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 $grid = array_fill(0, 1000, array_fill(0, 1000, 0));
 $regex = '/(turn on|turn off|toggle) ([0-9]+),([0-9]+) through ([0-9]+),([0-9]+)/i';
 foreach($lines as $line) {

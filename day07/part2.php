@@ -6,7 +6,7 @@ class Circuit {
     private $nodes = array();
 
     public function __construct() {
-        $this->instructions = file('input.txt');
+        $this->instructions = file('input.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
         $this->parse();
     }
     

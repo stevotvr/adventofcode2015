@@ -5,7 +5,7 @@ class Circuit {
     private $nodes = array();
 
     public function __construct() {
-        $lines = file('input.txt');
+        $lines = file('input.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
         foreach($lines as $line) {
             $parts = explode('->', $line);
             if(count($parts) !== 2) {

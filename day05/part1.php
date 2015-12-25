@@ -1,6 +1,6 @@
 <?php
 
-$words = file('input.txt');
+$words = file('input.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 $vowels = array('a', 'e', 'i', 'o', 'u');
 $badPairs = array('ab', 'cd', 'pq', 'xy');
 $good = 0;
