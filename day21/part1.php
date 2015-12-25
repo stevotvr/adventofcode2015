@@ -88,7 +88,7 @@ function getCombinations(array $items, $count, array &$combos, array $combo = ar
 function isWinner(array $player, array $boss) {
     $playerDamage = max(array(1, $player['d'] - $boss['a']));
     $bossDamage = max(array(1, $boss['d'] - $player['a']));
-    return $player['h'] / $bossDamage > $boss['h'] / $playerDamage;
+    return ceil($player['h'] / $bossDamage) >= ceil($boss['h'] / $playerDamage);
 }
 
 $ringCombos = array();
