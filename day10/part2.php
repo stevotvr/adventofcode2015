@@ -19,4 +19,4 @@ for($i = 0; $i < $iterations; $i++) {
     $input = $output;
 }
 
-echo 'Answer: ' . strlen($input);
+echo 'Answer: ' . strlen($input) . PHP_EOL;

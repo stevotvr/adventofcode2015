@@ -38,4 +38,4 @@ foreach($permutations as $route) {
     $longest = max(array($longest, $distance));
 }
 
-echo 'Answer: ' . $longest;
+echo 'Answer: ' . $longest . PHP_EOL;

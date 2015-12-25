@@ -8,4 +8,5 @@ while(true) {
         break;
     }
 }
-echo 'Answer: ' . $number;
+
+echo 'Answer: ' . $number . PHP_EOL;

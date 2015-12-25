@@ -9,4 +9,4 @@ foreach($lines as $line) {
     $length += 2 * $sides[0] + 2 * $sides[1];
     $length += $l * $w * $h;
 }
-echo 'Answer: ' . $length . ' ft';
+echo 'Answer: ' . $length . ' ft' . PHP_EOL;

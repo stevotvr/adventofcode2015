@@ -56,4 +56,4 @@ getAllValidSets($targetWeight, $input, $sets, $smallest);
 
 $lowestQE = min(array_map('array_product', $sets));
 
-echo 'Answer: ' . $lowestQE;
+echo 'Answer: ' . $lowestQE . PHP_EOL;

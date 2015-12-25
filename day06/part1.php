@@ -36,4 +36,4 @@ foreach($grid as $row) {
     }
 }
 
-echo 'Answer: ' . $count . ' lights are on';
+echo 'Answer: ' . $count . ' lights are on' . PHP_EOL;

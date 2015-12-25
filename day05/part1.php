@@ -27,4 +27,4 @@ foreach($words as $word) {
     }
 }
 
-echo 'Answer: ' . $good;
+echo 'Answer: ' . $good . PHP_EOL;

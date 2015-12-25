@@ -34,4 +34,4 @@ foreach($grid as $row) {
     }
 }
 
-echo 'Answer: ' . $brightness . ' brightness';
+echo 'Answer: ' . $brightness . ' brightness' . PHP_EOL;

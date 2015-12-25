@@ -26,4 +26,4 @@ while($input !== 'e') {
     }
 }
 
-echo 'Answer: ' . $steps;
+echo 'Answer: ' . $steps . PHP_EOL;

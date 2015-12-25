@@ -44,4 +44,4 @@ while($i < count($input)) {
     }
 }
 
-echo 'Answer: ' . $r['b'];
+echo 'Answer: ' . $r['b'] . PHP_EOL;

@@ -52,4 +52,4 @@ for($i = 0; $i < $steps; $i++) {
     $grid = $newGrid;
 }
 
-echo 'Answer: ' . $num;
+echo 'Answer: ' . $num . PHP_EOL;

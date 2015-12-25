@@ -14,4 +14,4 @@ foreach(str_split($input) as $char) {
     }
     $step++;
 }
-echo 'Answer: step ' . $step;
+echo 'Answer: step ' . $step . PHP_EOL;

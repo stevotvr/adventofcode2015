@@ -68,4 +68,4 @@ for($i = 0; $i < $time; $i++) {
     }
 }
 
-echo 'Answer: ' . $leadPoints;
+echo 'Answer: ' . $leadPoints . PHP_EOL;

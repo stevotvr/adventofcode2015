@@ -31,4 +31,4 @@ foreach(str_split($input) as $char) {
     }
 }
 
-echo 'Answer: ' . (strlen($input) - strlen($output));
+echo 'Answer: ' . (strlen($input) - strlen($output)) . PHP_EOL;

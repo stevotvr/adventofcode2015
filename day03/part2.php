@@ -24,4 +24,4 @@ foreach(str_split($input) as $move) {
     $grid[$santas[$i][0] . 'x' . $santas[$i][1]] = true;
     $robo = !$robo;
 }
-echo 'Answer: ' . count($grid) . ' houses';
+echo 'Answer: ' . count($grid) . ' houses' . PHP_EOL;

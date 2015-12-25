@@ -52,4 +52,4 @@ function getNext($input) {
     return $next;
 }
 
-echo 'Answer: ' . getNext($input);
+echo 'Answer: ' . getNext($input) . PHP_EOL;

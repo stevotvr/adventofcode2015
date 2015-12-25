@@ -37,4 +37,4 @@ foreach($permutations as $permutation) {
     $totalHappiness = max(array($totalHappiness, $happiness));
 }
 
-echo 'Answer: ' . $totalHappiness;
+echo 'Answer: ' . $totalHappiness . PHP_EOL;

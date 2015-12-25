@@ -176,4 +176,4 @@ class RShiftGate extends Gate {
 
 }
 
-echo 'Answer: a -> ' . (new Circuit())->getNode('a')->output();
+echo 'Answer: a -> ' . (new Circuit())->getNode('a')->output() . PHP_EOL;

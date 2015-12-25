@@ -16,4 +16,4 @@ function countCombinations(array $data, $total, &$count) {
 
 countCombinations($data, 150, $count);
 
-echo 'Answer: ' . $count;
+echo 'Answer: ' . $count . PHP_EOL;

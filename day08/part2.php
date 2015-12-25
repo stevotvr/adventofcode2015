@@ -17,4 +17,4 @@ foreach($lines as $line) {
     $output .= '"' . PHP_EOL;
 }
 
-echo 'Answer: ' . (strlen($output) - strlen($input));
+echo 'Answer: ' . (strlen($output) - strlen($input)) . PHP_EOL;

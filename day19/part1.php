@@ -25,4 +25,4 @@ foreach($map as $el => $reps) {
     }
 }
 
-echo 'Answer: ' . count($output);
+echo 'Answer: ' . count($output) . PHP_EOL;

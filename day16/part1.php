@@ -22,6 +22,6 @@ foreach($lines as $line) {
             continue 2;
         }
     }
-    echo 'Answer: ' . $name;
+    echo 'Answer: ' . $name . PHP_EOL;
     break;
 }

@@ -112,7 +112,7 @@ usort($combos, function($a, $b) {
 });
 foreach($combos as $combo) {
     if(!isWinner(calcStats($combo['items']), $bossStats)) {
-        echo 'Answer: ' . $combo['cost'];
+        echo 'Answer: ' . $combo['cost'] . PHP_EOL;
         break;
     }
 }

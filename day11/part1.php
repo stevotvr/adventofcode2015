@@ -50,4 +50,4 @@ while(!isValid($output)) {
     $output = increment($output);
 }
 
-echo 'Answer: ' . $output;
+echo 'Answer: ' . $output . PHP_EOL;

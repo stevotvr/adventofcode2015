@@ -9,4 +9,4 @@ foreach(str_split($input) as $char) {
         $floor--;
     }
 }
-echo 'Answer: floor ' . $floor;
+echo 'Answer: floor ' . $floor . PHP_EOL;

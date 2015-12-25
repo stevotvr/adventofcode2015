@@ -56,4 +56,4 @@ function getBestRecipe($total, array $ings, array $props, &$best, array $amounts
 
 getBestRecipe(100, $data, $properties, $best);
 
-echo 'Answer: ' . $best;
+echo 'Answer: ' . $best . PHP_EOL;

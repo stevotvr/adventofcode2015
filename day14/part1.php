@@ -52,4 +52,4 @@ for($i = 0; $i < $time; $i++) {
     }
 }
 
-echo 'Answer: ' . $farthest;
+echo 'Answer: ' . $farthest . PHP_EOL;

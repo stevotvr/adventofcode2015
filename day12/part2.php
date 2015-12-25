@@ -21,4 +21,4 @@ function sumInts(array $array) {
     return $sum;
 }
 
-echo 'Answer: ' . sumInts($json);
+echo 'Answer: ' . sumInts($json) . PHP_EOL;

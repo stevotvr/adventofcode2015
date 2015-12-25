@@ -9,4 +9,4 @@ foreach($lines as $line) {
     $area += 2 * $h * $l;
     $area += min(array($l * $w, $w * $h, $h * $l));
 }
-echo 'Answer: ' . $area . ' sq. ft';
+echo 'Answer: ' . $area . ' sq. ft' . PHP_EOL;

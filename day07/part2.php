@@ -195,4 +195,4 @@ $out = $circ->getNode('a')->output();
 $circ->reset();
 $circ->setNode('b', new RawValue($out));
 
-echo 'Answer: a -> ' . $circ->getNode('a')->output();
+echo 'Answer: a -> ' . $circ->getNode('a')->output() . PHP_EOL;

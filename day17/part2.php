@@ -19,7 +19,7 @@ countCombinations($data, 150, $counts);
 
 foreach($counts as $count) {
     if($count > 0) {
-        echo 'Answer: ' . $count;
+        echo 'Answer: ' . $count . PHP_EOL;
         break;
     }
 }

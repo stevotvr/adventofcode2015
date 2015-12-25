@@ -217,4 +217,4 @@ class Recharge extends Effect {
 
 }
 
-echo 'Answer: ' . Game::getLowestWinCost();
+echo 'Answer: ' . Game::getLowestWinCost() . PHP_EOL;

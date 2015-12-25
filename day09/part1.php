@@ -38,4 +38,4 @@ foreach($permutations as $route) {
     $shortest = min(array($shortest, $distance));
 }
 
-echo 'Answer: ' . $shortest;
+echo 'Answer: ' . $shortest . PHP_EOL;

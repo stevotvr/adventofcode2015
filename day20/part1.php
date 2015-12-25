@@ -13,7 +13,7 @@ for($i = 1;; $i++) {
         }
     }
     if($total >= $input) {
-        echo 'Answer: ' . $i;
+        echo 'Answer: ' . $i . PHP_EOL;
         break 2;
     }
 }

@@ -14,7 +14,7 @@ for($i = 1; $i < $limit; $i++) {
 
 foreach($houses as $num => $count) {
     if($count >= $input) {
-        echo 'Answer: ' . $num;
+        echo 'Answer: ' . $num . PHP_EOL;
         break;
     }
 }

@@ -37,6 +37,6 @@ foreach($lines as $line) {
                 }
         }
     }
-    echo 'Answer: ' . $name;
+    echo 'Answer: ' . $name . PHP_EOL;
     break;
 }
