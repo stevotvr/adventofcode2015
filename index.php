@@ -7,9 +7,10 @@
     <body>
         <h1>Advent of Code Solutions</h1>
         <ol>
-<?php for($i = 1; $i <= 25; $i++) : ?>
+<?php for($i = 1; $i <= 24; $i++) : ?>
             <li><a href="day<?php printf('%02d', $i); ?>/part1.php">Part 1</a> <a href="day<?php printf('%02d', $i); ?>/part2.php">Part 2</a></li>
 <?php endfor; ?>
+            <li><a href="day25/part1.php">Part 1</a></li>
         </ol>
     </body>
 </html>
