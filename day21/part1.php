@@ -74,45 +74,27 @@ function calcStats(array $inv) {
     );
 }
 
-function getCombinations(array $items, $count, array &$combos, array $combo = array()) {
-    if($count === 0) {
-        $combos[] = $combo;
-    }
-    while(count($items) > 0) {
-        $newCombo = $combo;
-        $newCombo[] = array_pop($items);
-        getCombinations($items, $count - 1, $combos, $newCombo);
-    }
-}
-
 function isWinner(array $player, array $boss) {
     $playerDamage = max(array(1, $player['d'] - $boss['a']));
     $bossDamage = max(array(1, $boss['d'] - $player['a']));
     return ceil($player['h'] / $bossDamage) >= ceil($boss['h'] / $playerDamage);
 }
 
-$ringCombos = array();
-getCombinations($items['r'], 2, $ringCombos);
-
-$combos = array();
+$lowestCost = PHP_INT_MAX;
 foreach($items['w'] as $w) {
     foreach($items['a'] as $a) {
-        foreach($ringCombos as $r) {
-            $combo = array_merge(array($w, $a), $r);
-            $combos[] = array(
-                'items' => $combo,
-                'cost' => calcCost($combo)
-            );
+        foreach($items['r'] as $r1) {
+            foreach($items['r'] as $r2) {
+                if($r1 === $r2) {
+                    continue;
+                }
+                $playerItems = array($w, $a, $r1, $r2);
+                if(isWinner(calcStats($playerItems), $bossStats)) {
+                    $lowestCost = min(array($lowestCost, calcCost($playerItems)));
+                }
+            }
         }
     }
 }
 
-usort($combos, function($a, $b) {
-    return $a['cost'] - $b['cost'];
-});
-foreach($combos as $combo) {
-    if(isWinner(calcStats($combo['items']), $bossStats)) {
-        echo 'Answer: ' . $combo['cost'] . PHP_EOL;
-        break;
-    }
-}
+echo 'Answer: ' . $lowestCost;
